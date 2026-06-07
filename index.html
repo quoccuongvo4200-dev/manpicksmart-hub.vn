@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RHYS MAN • Premium Men's Grooming | Curated by ManPickSmart</title>
+<meta name="description" content="Bộ sưu tập grooming nam cao cấp — Sang trọng, Thanh lịch, Nam tính. Phong cách RHYS MAN: The Secret of Charisma. Giá Shopee, không phụ thu."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --ink: #0a0a0a;
+  --ink2: #111111;
+  --gold: #b8975a;
+  --gold2: #d4b07a;
+  --silver: #a8a29e;
+  --light: #f5f0e8;
+  --muted: #6b665f;
+  --border: rgba(184,151,90,.15);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--ink);
+  color:var(--light);
+  font-family:'Inter',system_ui,sans-serif;
+  font-weight:400;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* Premium Cursor */
+.cursor{width:8px;height:8px;background:var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .15s,height .15s;mix-blend-mode:difference;}
+.cursor-ring{width:32px;height:32px;border:1px solid var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:all .1s ease;opacity:.5;}
+
+/* Noise */
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:.55;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:600;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid var(--border);background:rgba(10,10,10,.96);backdrop-filter:blur(24px);}
+.logo{font-family:'Playfair Display',serif;font-size:22px;letter-spacing:-.02em;color:var(--light);display:flex;align-items:center;gap:8px;}
+.logo .rhys{font-weight:600;color:var(--gold);letter-spacing:.05em;}
+.logo sub{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:block;margin-top:1px;font-weight:400;}
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{color:var(--silver);text-decoration:none;font-size:12px;letter-spacing:.18em;text-transform:uppercase;transition:color .2s;position:relative;}
+.nav-links a:hover{color:var(--gold);}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .25s cubic-bezier(0.4,0,0.2,1);}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-cta{background:transparent;color:var(--gold);border:1px solid var(--gold);padding:10px 26px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:all .2s ease;}
+.nav-cta:hover{background:var(--gold);color:var(--ink);}
+
+/* HERO */
+.hero{min-height:100vh;padding:120px 60px 80px;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:60px;position:relative;overflow:hidden;background:#0a0a0a;}
+.hero-content{max-width:580px;z-index:2;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:12px;margin-bottom:20px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);}
+.hero-eyebrow::before{content:'';width:42px;height:1px;background:var(--gold);}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(46px,5.6vw,76px);line-height:1.05;font-weight:400;color:var(--light);margin-bottom:20px;}
+.hero-title .rhys{color:var(--gold);font-weight:600;}
+.hero-sub{font-size:15.5px;color:var(--silver);max-width:460px;margin-bottom:40px;line-height:1.7;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 36px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:all .25s cubic-bezier(0.4,0,0.2,1);cursor:pointer;border:none;font-family:inherit;}
+.btn-gold{background:var(--gold);color:var(--ink);}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);}
+.btn-outline{background:transparent;color:var(--light);border:1px solid rgba(245,240,232,.25);}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+
+.hero-visual{position:relative;border-radius:4px;overflow:hidden;box-shadow:0 30px 70px -15px rgba(0,0,0,.6);aspect-ratio:16/10.5;}
+.hero-visual img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(0.4,0,0.2,1);}
+.hero-visual:hover img{transform:scale(1.035);}
+.hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.1),rgba(10,10,10,.35) 70%);z-index:1;}
+
+/* Trust bar */
+.trust-bar{display:flex;align-items:center;gap:32px;padding:18px 60px;border-bottom:1px solid var(--border);background:var(--ink2);font-size:12px;color:var(--muted);}
+.trust-item{display:flex;align-items:center;gap:8px;}
+.trust-item span{color:var(--gold);font-weight:500;}
+
+/* SECTIONS */
+.section{padding:80px 60px;}
+.section-header{margin-bottom:48px;}
+.section-header small{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);}
+.section-header h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;color:var(--light);line-height:1.1;margin-top:8px;}
+.section-header h2 em{font-style:italic;color:var(--gold);}
+
+/* FILTER */
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;border-bottom:1px solid var(--border);padding-bottom:12px;}
+.filter-btn{background:transparent;border:none;color:var(--muted);padding:10px 22px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:all .2s;border-bottom:2px solid transparent;margin-bottom:-1px;}
+.filter-btn.active,.filter-btn:hover{color:var(--gold);border-bottom-color:var(--gold);}
+
+/* PRODUCT GRID - Premium elegant cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:2px;background:var(--border);}
+.card{background:var(--ink2);transition:transform .4s cubic-bezier(0.4,0,0.2,1),box-shadow .4s ease,border-color .3s;border:1px solid transparent;overflow:hidden;opacity:0;transform:translateY(20px);}
+.card.visible{opacity:1;transform:translateY(0);}
+.card:hover{transform:translateY(-8px);box-shadow:0 25px 50px -12px rgb(0 0 0 / 0.5);border-color:var(--gold);z-index:3;}
+
+.card-img{
+  width:100%;
+  aspect-ratio:4 / 3.05;
+  background: linear-gradient(145deg, #111111, #1a1814);
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.card-img::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 28% 25%, rgba(184,151,90,0.09) 0%, transparent 55%),
+    linear-gradient(145deg, transparent 35%, rgba(184,151,90,0.035) 65%);
+  z-index:1;
+}
+.card-img::after{
+  content:'';
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  width:38px;
+  height:38px;
+  border:1px solid rgba(184,151,90,0.4);
+  border-radius:50%;
+  opacity:0.65;
+  z-index:2;
+}
+.card-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s ease;
+  position:relative;
+  z-index:3;
+}
+.card:hover .card-img img{transform:scale(1.06);}
+
+.card-badge{position:absolute;top:16px;right:16px;background:var(--gold);color:var(--ink);font-size:9px;padding:4px 10px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;z-index:4;}
+.card-body{padding:26px 24px 22px;}
+.card-cat{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.card-name{font-family:'Playfair Display',serif;font-size:18.5px;color:var(--light);line-height:1.25;margin-bottom:10px;}
+.card-desc{font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;min-height:68px;}
+.card-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:18px;}
+.card-price{font-family:'Playfair Display',serif;font-size:22px;color:var(--gold);}
+.card-price s{font-size:13px;color:var(--muted);margin-left:8px;font-family:'Inter',sans-serif;}
+.card-btn{background:transparent;color:var(--gold);border:1px solid var(--gold);padding:9px 20px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:all .2s;}
+.card-btn:hover{background:var(--gold);color:var(--ink);}
+
+/* SIGNATURE SECTION */
+.featured{background:var(--ink2);padding:80px 60px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:40px;}
+.featured-card{position:relative;overflow:hidden;border-radius:3px;aspect-ratio:16/10;box-shadow:0 10px 30px rgba(0,0,0,.4);}
+.featured-card img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(0.4,0,0.2,1);}
+.featured-card:hover img{transform:scale(1.08);}
+.featured-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent,rgba(10,10,10,.75) 65%);}
+.featured-card .overlay{position:absolute;bottom:0;left:0;right:0;padding:32px 28px;z-index:2;}
+.featured-card .overlay h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--light);margin-bottom:6px;}
+.featured-card .overlay p{font-size:14px;color:var(--silver);max-width:280px;}
+
+/* PROMISE */
+.promise{padding:80px 60px;display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center;}
+.promise-left h2{font-family:'Playfair Display',serif;font-size:34px;line-height:1.2;margin-bottom:20px;}
+.promise-left p{color:var(--muted);font-size:15px;max-width:42ch;}
+.promise-features{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+.promise-features .item{border-left:1px solid var(--border);padding-left:22px;}
+.promise-features .item h4{font-size:15px;margin-bottom:6px;color:var(--light);}
+.promise-features .item p{font-size:13.5px;color:var(--muted);}
+
+/* FOOTER */
+footer{background:#070707;border-top:1px solid var(--border);padding:60px 60px 36px;font-size:13.5px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:50px;}
+.footer-brand p{color:var(--muted);max-width:320px;margin-top:14px;}
+.footer-col h5{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:9px;}
+.footer-col a{color:var(--muted);text-decoration:none;transition:color .2s;}
+.footer-col a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;color:var(--muted);font-size:12px;}
+
+/* Responsive */
+@media(max-width:900px){
+  nav{padding:16px 24px;}
+  .hero{grid-template-columns:1fr;padding:110px 24px 60px;gap:40px;}
+  .hero-visual{aspect-ratio:16/11;}
+  .section,.featured,.promise{padding-left:24px;padding-right:24px;}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));}
+  .footer-grid{grid-template-columns:1fr;gap:40px;}
+  .promise{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV with RHYS MAN logo style -->
+<nav>
+  <div class="logo">
+    <span class="rhys">RHYS MAN</span>
+    <sub>THE SECRET OF CHARISMA</sub>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#products">Sản phẩm</a></li>
+    <li><a href="#signature">Signature</a></li>
+    <li><a href="#promise">Cam kết</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Khám phá ngay</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Sang trọng • Thanh lịch • Nam tính</div>
+    <h1 class="hero-title">
+      <span class="rhys">RHYS MAN</span><br>
+      Phong cách <em>không cần cố gắng.</em>
+    </h1>
+    <p class="hero-sub">Bộ sưu tập grooming nam được chọn lọc kỹ càng — tinh thần tối giản, hiệu quả cao và sang trọng như những thương hiệu premium hàng đầu. Dành cho quý ông hiện đại.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn btn-gold">Xem bộ sưu tập</a>
+      <a href="#signature" class="btn btn-outline">Signature looks</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="/home/workdir/artifacts/imagine_images/DTQRl.jpg" alt="Premium men's grooming products - RHYS MAN style" />
+  </div>
+</section>
+
+<!-- Trust bar -->
+<div class="trust-bar">
+  <div class="trust-item"><span>✓</span> 100% Chính hãng Shopee</div>
+  <div class="trust-item"><span>✓</span> Giá không đổi</div>
+  <div class="trust-item"><span>✓</span> Chọn lọc bởi quý ông</div>
+  <div class="trust-item"><span>✓</span> Cập nhật deal hàng tuần</div>
+</div>
+
+<!-- PRODUCTS - Full 34 -->
+<section id="products" class="section">
+  <div class="section-header">
+    <small>✦ BỘ SƯU TẬP 2026</small>
+    <h2>Sản phẩm <em>được chọn lọc</em> cho quý ông</h2>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-cat="all">Tất cả</button>
+    <button class="filter-btn" data-cat="face">Dưỡng mặt</button>
+    <button class="filter-btn" data-cat="beard">Râu &amp; Tóc</button>
+    <button class="filter-btn" data-cat="body">Body</button>
+    <button class="filter-btn" data-cat="sun">Chống nắng</button>
+    <button class="filter-btn" data-cat="scent">Hương thơm</button>
+  </div>
+
+  <div class="grid" id="productGrid">
+
+    <!-- Product 1 -->
+    <div class="card" data-cat="face">
+      <div class="card-badge">Best Seller</div>
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Dưỡng mặt • Làm sạch</div>
+        <div class="card-name">Sữa Rửa Mặt Nam Sạch Sâu</div>
+        <div class="card-desc">Làm sạch sâu bã nhờn &amp; tạp chất, kiểm soát dầu tự nhiên. Nền tảng grooming sạch sẽ, tươi mát cho quý ông bận rộn.</div>
+        <div class="card-footer">
+          <div class="card-price">85k <s>130k</s></div>
+          <a href="https://s.shopee.vn/8pjDjFSEEs" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="card" data-cat="face">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Dưỡng mặt • Serum</div>
+        <div class="card-name">Serum Kiểm Soát Dầu Nam</div>
+        <div class="card-desc">Giảm bóng nhờn nhanh chóng, thu nhỏ lỗ chân lông, mang lại bề mặt da mịn màng, không bóng.</div>
+        <div class="card-footer">
+          <div class="card-price">175k <s>280k</s></div>
+          <a href="https://s.shopee.vn/2g8aNwCoOB" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="card" data-cat="sun">
+      <div class="card-badge">-35%</div>
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Chống nắng • SPF50+</div>
+        <div class="card-name">Kem Chống Nắng Nam SPF50+</div>
+        <div class="card-desc">Bảo vệ tối ưu trước UVA/UVB, không bết dính, không trắng da. Kết cấu nhẹ, thấm nhanh.</div>
+        <div class="card-footer">
+          <div class="card-price">145k <s>220k</s></div>
+          <a href="https://s.shopee.vn/4qD4xvubUy" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="card" data-cat="face">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Dưỡng mặt • 24h</div>
+        <div class="card-name">Kem Dưỡng Ẩm Nam Đa Năng</div>
+        <div class="card-desc">Cấp ẩm sâu 24 giờ, giảm kích ứng sau cạo râu, phục hồi hàng rào bảo vệ da.</div>
+        <div class="card-footer">
+          <div class="card-price">120k <s>185k</s></div>
+          <a href="https://s.shopee.vn/BRFPNKYhZ" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="card" data-cat="beard">
+      <div class="card-badge">Trending</div>
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Râu &amp; Tóc • Dưỡng</div>
+        <div class="card-name">Dầu Dưỡng Râu Beard Oil</div>
+        <div class="card-desc">Làm mềm râu, dưỡng da dưới râu, giảm ngứa. Hương gỗ đàn hương sang trọng.</div>
+        <div class="card-footer">
+          <div class="card-price">135k <s>200k</s></div>
+          <a href="https://s.shopee.vn/1qZTORmrU4" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="card" data-cat="beard">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Râu &amp; Tóc • Tạo kiểu</div>
+        <div class="card-name">Wax Tạo Kiểu Tóc Matte</div>
+        <div class="card-desc">Giữ nếp tự nhiên cả ngày, finish matte cao cấp, không bết dính tay.</div>
+        <div class="card-footer">
+          <div class="card-price">95k <s>150k</s></div>
+          <a href="https://s.shopee.vn/2VpABhbGZl" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="card" data-cat="face">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Dưỡng mặt • Cân bằng</div>
+        <div class="card-name">Toner Cân Bằng Da Nam</div>
+        <div class="card-desc">Se khít lỗ chân lông, cân bằng pH, chuẩn bị da hấp thụ dưỡng chất tối ưu.</div>
+        <div class="card-footer">
+          <div class="card-price">110k <s>170k</s></div>
+          <a href="https://s.shopee.vn/7AazkHyP7z" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="card" data-cat="scent">
+      <div class="card-badge">Sang trọng</div>
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Hương thơm • Nam tính</div>
+        <div class="card-name">Nước Hoa Nam Musk &amp; Gỗ</div>
+        <div class="card-desc">Hương gỗ đàn hương &amp; xạ hương sâu lắng. Lưu hương 8h+. Quyến rũ, lịch lãm.</div>
+        <div class="card-footer">
+          <div class="card-price">320k <s>480k</s></div>
+          <a href="https://s.shopee.vn/AUrRiQY6yQ" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="card" data-cat="body">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Body • Làm sạch</div>
+        <div class="card-name">Sữa Tắm Nam Charcoal</div>
+        <div class="card-desc">Than hoạt tính hút sạch bụi bẩn &amp; bã nhờn, khử mùi hiệu quả. Da sạch, khô thoáng.</div>
+        <div class="card-footer">
+          <div class="card-price">89k <s>135k</s></div>
+          <a href="https://s.shopee.vn/6AiSYU9rKF" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 10 -->
+    <div class="card" data-cat="beard">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Râu &amp; Tóc • Gội</div>
+        <div class="card-name">Dầu Gội Dành Cho Nam</div>
+        <div class="card-desc">Làm sạch da đầu sâu, kiểm soát gàu &amp; dầu thừa, nuôi dưỡng tóc chắc khỏe từ gốc.</div>
+        <div class="card-footer">
+          <div class="card-price">99k <s>155k</s></div>
+          <a href="https://s.shopee.vn/2g8aO4rzQp" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 11 -->
+    <div class="card" data-cat="face">
+      <div class="card-badge">New</div>
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Dưỡng mặt • Chống lão hóa</div>
+        <div class="card-name">Kem Chống Lão Hóa Nam</div>
+        <div class="card-desc">Giảm nếp nhăn, hỗ trợ tái tạo collagen, cải thiện độ đàn hồi. Da căng bóng, trẻ trung hơn.</div>
+        <div class="card-footer">
+          <div class="card-price">195k <s>300k</s></div>
+          <a href="https://s.shopee.vn/AAEbJrwqem" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 12 -->
+    <div class="card" data-cat="sun">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Chống nắng • 2-in-1</div>
+        <div class="card-name">Fluid Chống Nắng Dưỡng Ẩm</div>
+        <div class="card-desc">Kết hợp chống nắng SPF50+ và dưỡng ẩm nhẹ nhàng. Kết cấu serum mỏng nhẹ, thấm cực nhanh.</div>
+        <div class="card-footer">
+          <div class="card-price">165k <s>240k</s></div>
+          <a href="https://s.shopee.vn/5q5c9vDLyg" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 13 -->
+    <div class="card" data-cat="beard">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Râu &amp; Tóc • Cạo</div>
+        <div class="card-name">Gel Cạo Râu Dịu Nhẹ</div>
+        <div class="card-desc">Tạo lớp đệm bảo vệ, cạo sát mà không gây kích ứng. Mùi thơm dễ chịu, da mịn sau cạo.</div>
+        <div class="card-footer">
+          <div class="card-price">75k <s>115k</s></div>
+          <a href="https://s.shopee.vn/17pDDCkHY" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 14 -->
+    <div class="card" data-cat="body">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Body • Khử mùi</div>
+        <div class="card-name">Lăn Khử Mùi Nam 48h</div>
+        <div class="card-desc">Kiểm soát mồ hôi &amp; mùi cơ thể bền lâu đến 48 giờ, không để lại vệt trắng trên quần áo.</div>
+        <div class="card-footer">
+          <div class="card-price">69k <s>100k</s></div>
+          <a href="https://s.shopee.vn/1BJmbMngm1" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 15 -->
+    <div class="card" data-cat="scent">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Hương thơm • Toàn thân</div>
+        <div class="card-name">Xịt Thơm Toàn Thân Nam</div>
+        <div class="card-desc">Hương tươi mát, nam tính, lưu hương bền lâu. Dùng ngay sau tắm hoặc trước khi ra ngoài.</div>
+        <div class="card-footer">
+          <div class="card-price">115k <s>170k</s></div>
+          <a href="https://s.shopee.vn/80A6jwH115" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 16 -->
+    <div class="card" data-cat="beard">
+      <div class="card-badge">Pro</div>
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Râu &amp; Tóc • Classic</div>
+        <div class="card-name">Pomade Tạo Kiểu Bóng Gương</div>
+        <div class="card-desc">Giữ nếp cứng, độ bóng gương cao cấp. Phong cách cổ điển, lịch lãm — lựa chọn của quý ông yêu thích barber shop.</div>
+        <div class="card-footer">
+          <div class="card-price">105k <s>160k</s></div>
+          <a href="https://s.shopee.vn/2g8aO9S2x8" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 17 -->
+    <div class="card" data-cat="face">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Dưỡng mặt • Detox</div>
+        <div class="card-name">Mặt Nạ Than Hoạt Tính Nam</div>
+        <div class="card-desc">Hút sạch bã nhờn, bụi bẩn &amp; tạp chất sâu trong lỗ chân lông. Da sáng mịn, thông thoáng ngay sau 1 lần dùng.</div>
+        <div class="card-footer">
+          <div class="card-price">79k <s>120k</s></div>
+          <a href="https://s.shopee.vn/BRFPZOVjE" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 18 -->
+    <div class="card" data-cat="body">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Body • Tẩy da chết</div>
+        <div class="card-name">Tẩy Tế Bào Chết Body Nam</div>
+        <div class="card-desc">Loại bỏ da chết, kích thích tái tạo da mới. Da thô ráp trở nên mịn màng, săn chắc hơn.</div>
+        <div class="card-footer">
+          <div class="card-price">89k <s>135k</s></div>
+          <a href="https://s.shopee.vn/9zvB7eJFV2" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 19 -->
+    <div class="card" data-cat="scent">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Hương thơm • Tươi mát</div>
+        <div class="card-name">Nước Hoa Nam Aqua Fresh</div>
+        <div class="card-desc">Hương biển xanh, tươi mát, trẻ trung. Lưu hương vừa phải, phù hợp ban ngày, công sở.</div>
+        <div class="card-footer">
+          <div class="card-price">285k <s>420k</s></div>
+          <a href="https://s.shopee.vn/LkfbtajxS" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 20 -->
+    <div class="card" data-cat="face">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Dưỡng mặt • Vùng mắt</div>
+        <div class="card-name">Kem Mắt Trị Thâm Quầng Nam</div>
+        <div class="card-desc">Giảm quầng thâm, bọng mắt, cải thiện độ săn chắc vùng da mỏng quanh mắt.</div>
+        <div class="card-footer">
+          <div class="card-price">149k <s>220k</s></div>
+          <a href="https://s.shopee.vn/7VDq94nwrs" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 21 -->
+    <div class="card" data-cat="beard">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Râu &amp; Tóc • Mọc râu</div>
+        <div class="card-name">Serum Kích Thích Mọc Râu</div>
+        <div class="card-desc">Nuôi dưỡng nang lông, thúc đẩy mọc râu dày và đều hơn sau 4 tuần.</div>
+        <div class="card-footer">
+          <div class="card-price">189k <s>280k</s></div>
+          <a href="https://s.shopee.vn/17pDJ5vEJ" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 22 -->
+    <div class="card" data-cat="body">
+      <div class="card-badge">Hot</div>
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Body • Dưỡng ẩm</div>
+        <div class="card-name">Kem Dưỡng Ẩm Body Nam</div>
+        <div class="card-desc">Thấm nhanh, không nhờn rít, dưỡng da tay chân mềm mịn sau tắm. Phù hợp khí hậu Việt Nam.</div>
+        <div class="card-footer">
+          <div class="card-price">95k <s>145k</s></div>
+          <a href="https://s.shopee.vn/17pDJoOtK" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 23 -->
+    <div class="card" data-cat="face">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Dưỡng mặt • Tẩy da chết</div>
+        <div class="card-name">Tẩy Tế Bào Chết Mặt Nam</div>
+        <div class="card-desc">Loại bỏ da chết nhẹ nhàng, thông thoáng lỗ chân lông, làm sáng da ngay sau 1 lần dùng.</div>
+        <div class="card-footer">
+          <div class="card-price">85k <s>130k</s></div>
+          <a href="https://s.shopee.vn/5fmBxkEsgt" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 24 -->
+    <div class="card" data-cat="beard">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Râu &amp; Tóc • Matte</div>
+        <div class="card-name">Clay Tạo Kiểu Tóc Matte Clay</div>
+        <div class="card-desc">Độ giữ nếp cao, finish matte tự nhiên. Rửa sạch dễ dàng với nước. Phù hợp phong cách hiện đại.</div>
+        <div class="card-footer">
+          <div class="card-price">99k <s>155k</s></div>
+          <a href="https://s.shopee.vn/7AazkVx9Hf" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 25 -->
+    <div class="card" data-cat="sun">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Chống nắng • Toàn thân</div>
+        <div class="card-name">Xịt Chống Nắng Toàn Thân Nam</div>
+        <div class="card-desc">Kháng nước, kháng mồ hôi, bảo vệ da toàn thân khi hoạt động ngoài trời. Dạng xịt tiện lợi.</div>
+        <div class="card-footer">
+          <div class="card-price">155k <s>230k</s></div>
+          <a href="https://s.shopee.vn/AAEbK2WPFV" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 26 -->
+    <div class="card" data-cat="scent">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Hương thơm • Cổ điển</div>
+        <div class="card-name">Nước Hoa Nam Oud &amp; Amber</div>
+        <div class="card-desc">Hương trầm hương, hổ phách ấm áp, bí ẩn. Lưu hương lâu, gợi cảm — dành cho buổi tối, sự kiện.</div>
+        <div class="card-footer">
+          <div class="card-price">380k <s>560k</s></div>
+          <a href="https://s.shopee.vn/9KfUKWDnLE" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 27 -->
+    <div class="card" data-cat="face">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Dưỡng mặt • Ngủ</div>
+        <div class="card-name">Mặt Nạ Ngủ Dưỡng Trắng Nam</div>
+        <div class="card-desc">Làm sáng da, đều màu da, phục hồi sâu trong khi ngủ. Da sáng mịn, rạng rỡ vào sáng hôm sau.</div>
+        <div class="card-footer">
+          <div class="card-price">125k <s>190k</s></div>
+          <a href="https://s.shopee.vn/9AM48EAj33" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 28 -->
+    <div class="card" data-cat="body">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Body • Tiện lợi</div>
+        <div class="card-name">Dầu Gội Khô Tạo Phồng</div>
+        <div class="card-desc">Làm sạch tóc không cần nước, tạo độ phồng tự nhiên ngay lập tức. Tiện dụng khi bận rộn.</div>
+        <div class="card-footer">
+          <div class="card-price">79k <s>120k</s></div>
+          <a href="https://s.shopee.vn/9UyuWqgw4x" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 29 -->
+    <div class="card" data-cat="face">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Dưỡng mặt • Kiểm soát nhờn</div>
+        <div class="card-name">Bọt Rửa Mặt Kiểm Soát Nhờn</div>
+        <div class="card-desc">Tạo bọt mịn, làm sạch sâu mà không làm mất độ ẩm tự nhiên. Da sạch, không căng rít.</div>
+        <div class="card-footer">
+          <div class="card-price">89k <s>135k</s></div>
+          <a href="https://s.shopee.vn/W45oJp0yL" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 30 -->
+    <div class="card" data-cat="beard">
+      <div class="card-badge">Classic</div>
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Râu &amp; Tóc • Bộ kit</div>
+        <div class="card-name">Bộ Chăm Sóc Râu Grooming Kit</div>
+        <div class="card-desc">Bộ đôi dầu dưỡng + sáp tạo hình râu cao cấp. Giúp râu mềm mượt, gọn gàng, mùi hương sang trọng.</div>
+        <div class="card-footer">
+          <div class="card-price">220k <s>340k</s></div>
+          <a href="https://s.shopee.vn/7fXGLUwnB8" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 31 -->
+    <div class="card" data-cat="sun">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Chống nắng • Serum</div>
+        <div class="card-name">Serum Chống Nắng + Dưỡng Trắng</div>
+        <div class="card-desc">SPF50 PA++++, dưỡng trắng da nhẹ nhàng, kết cấu serum thấm cực nhanh. Không nhờn, không trắng da.</div>
+        <div class="card-footer">
+          <div class="card-price">178k <s>265k</s></div>
+          <a href="https://s.shopee.vn/5VSllWrR9o" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 32 -->
+    <div class="card" data-cat="scent">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Hương thơm • Tắm</div>
+        <div class="card-name">Gel Tắm Nước Hoa Nam</div>
+        <div class="card-desc">Vừa tắm vừa tận hưởng mùi hương sang trọng, da mềm mại sau tắm. Hương gỗ &amp; tươi mát nam tính.</div>
+        <div class="card-footer">
+          <div class="card-price">95k <s>145k</s></div>
+          <a href="https://s.shopee.vn/2BCJnPYr8b" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 33 -->
+    <div class="card" data-cat="face">
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Dưỡng mặt • Xịt khoáng</div>
+        <div class="card-name">Nước Xịt Khoáng Phục Hồi Nam</div>
+        <div class="card-desc">Xịt mát tức thì, cấp ẩm nhanh, làm dịu da sau cạo râu hoặc tiếp xúc nắng. Dùng được cả ngày.</div>
+        <div class="card-footer">
+          <div class="card-price">75k <s>115k</s></div>
+          <a href="https://s.shopee.vn/6L1sl50N9R" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 34 -->
+    <div class="card" data-cat="body">
+      <div class="card-badge">Sale</div>
+      <div class="card-img"></div>
+      <div class="card-body">
+        <div class="card-cat">Body • Thể thao</div>
+        <div class="card-name">Sữa Tắm Nam Active Sport</div>
+        <div class="card-desc">Dành cho nam năng động, khử mùi mạnh, làm mát da sau hoạt động thể thao. Hương tươi mát, sạch sâu.</div>
+        <div class="card-footer">
+          <div class="card-price">79k <s>120k</s></div>
+          <a href="https://s.shopee.vn/6VLIxOarPZ" target="_blank" class="card-btn">Mua ngay</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SIGNATURE with professional images -->
+<section id="signature" class="featured">
+  <div class="section-header" style="max-width:620px;">
+    <small>✦ SIGNATURE AESTHETIC</small>
+    <h2>Phong cách <em>Sang trọng • Thanh lịch • Nam tính</em></h2>
+    <p style="margin-top:12px; color:var(--muted); max-width:460px;">Những hình ảnh và sản phẩm mang tinh thần tối giản, sang trọng và nam tính — đúng chất grooming hiện đại như RHYS MAN.</p>
+  </div>
+
+  <div class="featured-grid">
+    <div class="featured-card">
+      <img src="/home/workdir/artifacts/imagine_images/Jjfai.jpg" alt="Beard grooming essentials - premium beard oil and balm" />
+      <div class="overlay">
+        <h3>Beard Rituals</h3>
+        <p>Dầu dưỡng râu + sáp tạo hình. Hoàn thiện nét râu gọn gàng, nam tính và sang trọng.</p>
+      </div>
+    </div>
+    <div class="featured-card">
+      <img src="/home/workdir/artifacts/imagine_images/q0plr.jpg" alt="Confident modern Vietnamese man with premium grooming" />
+      <div class="overlay">
+        <h3>The Modern Gentleman</h3>
+        <p>Tóc gọn gàng, râu chỉn chu, phong thái tự tin. Đó là grooming không cần nói nhiều.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section id="promise" class="section promise">
+  <div class="promise-left">
+    <small style="color:var(--gold); letter-spacing:.25em; text-transform:uppercase;">CAM KẾT</small>
+    <h2>Mua thông minh.<br>Không mất thêm xu nào.</h2>
+    <p>ManPickSmart Hub là affiliate Shopee. Bạn mua đúng giá Shopee. Chúng tôi nhận hoa hồng nhỏ từ nền tảng. Minh bạch, đôi bên cùng có lợi.</p>
+  </div>
+  <div class="promise-features">
+    <div class="item"><h4>Chính hãng 100%</h4><p>Từ shop uy tín, kiểm chứng trước khi đăng.</p></div>
+    <div class="item"><h4>Giá không đổi</h4><p>Không phụ thu, không khuyến mãi ảo.</p></div>
+    <div class="item"><h4>Chọn lọc kỹ</h4><p>Chỉ những sản phẩm thực sự tốt cho nam giới.</p></div>
+    <div class="item"><h4>Cập nhật liên tục</h4><p>Deal mới &amp; trending mỗi tuần.</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo"><span class="rhys">RHYS MAN</span></div>
+      <p>Curated premium men's grooming. Phong cách sang trọng, thanh lịch, nam tính. The Secret of Charisma.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Danh mục</h5>
+      <ul>
+        <li><a href="#products">Dưỡng mặt</a></li>
+        <li><a href="#products">Râu &amp; Tóc</a></li>
+        <li><a href="#products">Hương thơm</a></li>
+        <li><a href="#products">Chống nắng</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Thông tin</h5>
+      <ul>
+        <li><a href="#">Về chúng tôi</a></li>
+        <li><a href="#">Affiliate minh bạch</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 RHYS MAN Style • Affiliate Partner Shopee. Không phải trang chính thức.</div>
+    <div>Thiết kế cho quý ông có gu</div>
+  </div>
+</footer>
+
+<script>
+// Custom cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+function animateRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animateRing);}
+animateRing();
+
+document.querySelectorAll('a,button,.card,.filter-btn,.featured-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.width='16px';cursor.style.height='16px';ring.style.width='48px';ring.style.height='48px';});
+  el.addEventListener('mouseleave',()=>{cursor.style.width='8px';cursor.style.height='8px';ring.style.width='32px';ring.style.height='32px';});
+});
+
+// Filter
+const filterBtns=document.querySelectorAll('.filter-btn');
+const cards=document.querySelectorAll('.card');
+filterBtns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    filterBtns.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat=btn.dataset.cat;
+    cards.forEach(card=>{
+      card.style.display=(cat==='all'||card.dataset.cat===cat)?'':'none';
+    });
+  });
+});
+
+// Scroll reveal
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target);}});
+},{threshold:0.1});
+cards.forEach(card=>io.observe(card));
+
+// Keyboard accessibility
+filterBtns.forEach((btn,i)=>{
+  btn.setAttribute('tabindex','0');
+  btn.addEventListener('keydown',e=>{
+    if(e.key==='Enter')btn.click();
+    if(e.key==='ArrowRight')filterBtns[(i+1)%filterBtns.length].focus();
+    if(e.key==='ArrowLeft')filterBtns[(i-1+filterBtns.length)%filterBtns.length].focus();
+  });
+});
+</script>
+</body>
+</html>
